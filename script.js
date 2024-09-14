@@ -134,10 +134,10 @@ var change_password_box = document.querySelector(".change-password-box")
 var close_change_password = document.querySelector(".close-change-password")
 
 change_password_box_show.addEventListener("click", () => {
-    change_password_box.style.right = "0"
+    change_password_box.style.display = "block"
     profile_icon_option.style.display = "none"
 })
 
 close_change_password.addEventListener("click", () => {
-    change_password_box.style.right = "-70%"
+    change_password_box.style.display = "none"
 })
