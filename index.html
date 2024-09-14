@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User profile Page </title>
+
+    <!--My Css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="menu-logo">
+            <div class="navbar-menu-toggle" onclick="shownavbar()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <div class="logo">
+                <img src="company logo img.png" alt="">
+                <h3> GR Network </h3>
+            </div>
+        </div>
+
+        <div class="navbarlink-profile">
+
+            <div class="navbar-links">
+                <p> Courses </p>
+                <p> LIVE Classes <i class="fa-solid fa-chevron-down"></i> </p>
+                <p> Practice <i class="fa-solid fa-chevron-down"></i> </p>
+                <p> Resources <i class="fa-solid fa-chevron-down"></i> </p>
+                <p> Leaderboard </p>
+            </div>
+
+            <div class="faq-icon">
+                <i class="fa-regular fa-circle-question"></i>
+            </div>
+
+            <div class="profile-icon">
+                <img src="profile_img.png" alt="">
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!--Profile icon option -->
+    <div class="profile-icon-option">
+        <h6 class="my-profile-show"> <i class="fa-solid fa-user"></i> My Profile </h6>
+        <h6 class="change-password-box-show"> <i class="fa-solid fa-lock"></i> Change Password </h6>
+        <h6> <i class="fa-solid fa-right-from-bracket"></i> Sign out </h6>
+    </div>
+
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <div class="side-navbar-links">
+            <p> Courses </p>
+            <hr>
+            <p> LIVE Classes <i class="fa-solid fa-chevron-down"></i> </p>
+            <hr>
+            <p> Practice <i class="fa-solid fa-chevron-down"></i> </p>
+            <hr>
+            <p> Resources <i class="fa-solid fa-chevron-down"></i> </p>
+            <hr>
+            <p> Leaderboard </p>
+            <hr>
+            <p> Rewards </p>
+        </div>
+    </div>
+
+
+    <!-- My Profile -->
+    <div class="my-profile-box">
+        <div class="my-profile">
+
+            <div class="profile-details">
+
+                <div class="profile-box">
+                    <div class="profile-box-bg"> </div>
+
+                    <div class="profile-points">
+                        <div class="profile-img">
+                            <img src="profile_img.png" alt="">
+                        </div>
+
+                        <div class="story-point">
+                            <p> P </p>
+                            <h3> 500 </h3>
+                        </div>
+                    </div>
+
+                    <div class="personal-details-box">
+                        <div class="personal-details">
+                            <h4> Name </h4>
+                            <h6> Designation </h6>
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6> City </h6>, <h6> State </h6>, <h6> Country </h6>
+                            </div>
+                        </div>
+
+                        <div class="personal-details-edit">
+                            <i class="fa-solid fa-pen" id="show-personal-details"></i>
+                        </div>
+                    </div>
+
+                    <div class="box-end-line"></div>
+
+                    <div class="email-phno">
+                        <div class="email">
+                            <h6> Email ID <span> (Private to you) </span> </h6>
+                            <h5> <i class="fa-solid fa-envelope"></i> doc@gmail.com </h5>
+                        </div>
+
+                        <div class="mobile-no">
+                            <h6> Mobile Number <span> (Private to you) </span> </h6>
+                            <h5> <i class="fa-solid fa-phone"></i> 1234567890 </h5>
+                        </div>
+                    </div>
+
+                    <div class="down-share-btn">
+                        <button class="download-btn"> Download as Resume </button>
+                        <button class="share-profile-btn"> Share Profile </button>
+                    </div>
+
+                </div>
+
+                <div class="your-profile">
+
+                    <h3> Your Profile </h3>
+
+                    <div class="summary-box">
+                        <h4> Summary </h4>
+                        <hr>
+
+                        <div class="add-summary">
+                            <i class="fa-solid fa-list"></i>
+                            <p> Give us a short idea about who you are, what you like and what you are made of.</p>
+                            <button class="add-summary-btn"> Add Summary </button>
+                        </div>
+
+                    </div>
+
+                    <div class="education-box">
+                        <h4> Educational Qualifications </h4>
+                        <hr>
+
+                        <div class="add-qualification">
+                            <i class="fa-solid fa-school"></i>
+                            <p> Share your Educational Qualifications like your University and about your schooling</p>
+                            <button class="add-qualification-btn"> Add Education </button>
+                        </div>
+
+                    </div>
+
+                    <div class="personal-experience-box">
+                        <h4> Professional Experience </h4>
+                        <hr>
+
+                        <div class="add-experience">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <p> Share your Professional Experience and your contribution to the companies you worked.
+                            </p>
+                            <button class="add-experience-btn"> Add Experience </button>
+                        </div>
+
+                    </div>
+
+                    <div class="projects-box">
+                        <h4> Projects </h4>
+                        <hr>
+
+                        <div class="add-projects">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <p> Showcase the amazing projects you did that demonstarate your prowess in coding languages
+                            </p>
+                            <button class="add-projects-btn"> Add Projects </button>
+                        </div>
+
+                    </div>
+
+                    <div class="skills-box">
+                        <h4> Skills & Areas of Interest </h4>
+                        <hr>
+
+                        <div class="add-skills">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <p> Share the coding languages you know and other skills you have </p>
+                            <button class="add-skills-btn"> Add Skills and Interest </button>
+                        </div>
+
+                    </div>
+
+                    <div class="certifications-box">
+                        <h4> Certifications </h4>
+                        <hr>
+
+                        <div class="add-certifications">
+                            <i class="fa-solid fa-certificate"></i>
+                            <p> Share your achievements and certifications that decorate your hall of fame wall. </p>
+                            <button class="add-certifications-btn"> Add Certification</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="your-stats">
+                <h3> Your Stats <span> (Private to you) </span> </h3>
+
+                <div class="profile-task-count">
+                    <div class="profile-visit">
+                        <h6> Total No. of Profile Vists </h6>
+                        <h2> 0 </h2>
+                    </div>
+
+                    <div class="profile-visit-company">
+                        <h6> Profile visits by companies </h6>
+                        <h2> 0 </h2>
+                    </div>
+
+                    <div class="ongoing-courses">
+                        <h6> No. of on going courses </h6>
+                        <h2> 0 </h2>
+                    </div>
+
+                    <div class="courses-completed">
+                        <h6> No. of courses completed </h6>
+                        <h2> 0 </h2>
+                    </div>
+                </div>
+
+                <div class="redeem-rewards">
+                    <i class="fa-solid fa-gift"></i>
+                    <h5> Redeem your Rewards </h5>
+                    <p> You can use the earned Geekoins to redeem exciting rewards. </p>
+                    <h6> Go to Rewards </h6>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--My profile Edit-->
+    <div class="my-profile-edit-box">
+        <div class="my-profile-edit">
+            <div class="my-profile-title">
+                <h5> Personal Details </h5>
+
+                <div class="my-profile-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="my-profile-details">
+                <div class="profile-details-input">
+                    <label for="fistname"> First Name <span>*</span></label>
+                    <input type="text" name="fistname">
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="lastname"> Last Name <span>*</span></label>
+                    <input type="text" name="lastname">
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="email"> Email <span>*</span></label>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="phno"> Phone Number <span>*</span></label>
+                    <input type="number" name="phno">
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="gender"> Gender <span>*</span></label>
+                    <select name="gender" id="">
+                        <option> Male </option>
+                        <option> Female </option>
+                        <option> Others </option>
+                        <option> Rather not say </option>
+                    </select>
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="country"> Country <span>*</span></label>
+                    <input type="text" name="country">
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="state"> State <span>*</span></label>
+                    <input type="text" name="state">
+                </div>
+
+                <div class="profile-details-input">
+                    <label for="city"> City <span>*</span></label>
+                    <input type="text" name="city">
+                </div>
+
+                <div class="save">
+                    <button class="save-profile-btn"> Save </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Add Summary-->
+    <div class="add-summary-box">
+        <div class="add-summary-edit">
+            <div class="add-summary-title">
+                <h5> Summary </h5>
+
+                <div class="summary-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <p>Tell us about your years of experience, industry, or skills. People also talk about their achievements or
+                previous job experiences. </p>
+
+            <textarea type="message" class="add-message"> </textarea>
+
+            <div class="save">
+                <button class="save-message-btn"> Save </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Educational Qualification-->
+    <div class="add-education-box">
+        <div class="add-education-edit">
+            <div class="add-education-title">
+                <h5> Educational Qualification </h5>
+
+                <div class="close-education-box">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="edu-details-box">
+                <div class="edu-input-details">
+                    <label for="level"> Level  <span>*</span></label>
+                    <select name="level" id="">
+                        <option> Level </option>
+                        <option> Ph.D.</option>
+                        <option> Master </option>
+                        <option> Bachelors</option>
+                        <option> Diploma </option>
+                        <option> 10th std </option>
+                        <option> 12th std </option>
+                    </select>
+                </div>
+
+                <div class="edu-input-details">
+                    <label for="department"> Board/Department <span>*</span></label>
+                    <input type="text" name="department">
+                </div>
+
+                <div class="education-start-end">
+                    <div class="start-month">
+                        <label for="start-month"> Start Year <span>*</span></label>
+                        <select name="start-month" id="">
+                            <option> month </option>
+                            <option>  January </option>
+                            <option> February </option>
+                            <option> March </option>
+                            <option>  April </option>
+                            <option>   May </option>
+                            <option>  June </option>
+                            <option>   July </option>
+                            <option> August </option>
+                            <option>September </option>
+                            <option>October </option>
+                            <option> November </option>
+                            <option> December </option>
+                        </select>
+                
+                        <select name="start-year" id="">
+                            <option> Year </option>
+                            <option> 2011 </option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                            <option> 2024 </option>
+                        </select>
+                    </div>
+
+                    <div class="graduation-month">
+                        <label for="graduation-month"> Graduation year <span>*</span></label>
+                        <select name="graduation-month" id="">
+                            <option> month </option>
+                            <option>  January </option>
+                            <option> February </option>
+                            <option> March </option>
+                            <option>  April </option>
+                            <option>   May </option>
+                            <option>  June </option>
+                            <option>   July </option>
+                            <option> August </option>
+                            <option>September </option>
+                            <option>October </option>
+                            <option> November </option>
+                            <option> December </option>
+                        </select>
+                
+                        <select name="graduation-year" id="">
+                            <option> Year </option>
+                            <option> 2011 </option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                            <option> 2024 </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="edu-input-details">
+                    <label for="grade"> Grade <span>*</span></label>
+                    <input type="text" name="grade">
+                </div>
+
+                <div class="edu-input-details">
+                    <label for="school-college-Name"> School/College Name <span>*</span></label>
+                    <input type="text" name="school-college-Name">
+                </div>
+
+                <div class="edu-input-details">
+                    <label for="short-exp-details"> A short summary about your experience here <span>*</span></label>
+                    <textarea type="message" name="short-exp-details"> </textarea>
+                </div>
+
+                <div class="save">
+                    <button class="save-education-btn"> Save </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Add Professional Experience-->
+    <div class="add-experience-box">
+        <div class="add-experience-edit">
+            <div class="add-experience-title">
+                <h5> Professional Experience </h5>
+
+                <div class="close-experience-box">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="exp-details-box">
+                <div class="exp-input-details">
+                    <label for="job-title"> Job Title <span>*</span></label>
+                    <input type="text" name="job-title">
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="company"> Company <span>*</span></label>
+                    <input type="text" name="company">
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="employment"> Employment Type <span>*</span></label>
+                    <input type="text" name="employment">
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="location"> Location <span>*</span></label>
+                    <input type="text" name="location">
+                </div>
+
+                <div class="experience-start-end">
+                    <div class="start-month">
+                        <label for="start-month"> Start Year <span>*</span></label>
+                        <select name="start-month" id="">
+                            <option> month </option>
+                            <option>  January </option>
+                            <option> February </option>
+                            <option> March </option>
+                            <option>  April </option>
+                            <option>   May </option>
+                            <option>  June </option>
+                            <option>   July </option>
+                            <option> August </option>
+                            <option>September </option>
+                            <option>October </option>
+                            <option> November </option>
+                            <option> December </option>
+                        </select>
+                
+                        <select name="start-year" id="">
+                            <option> Year </option>
+                            <option> 2011 </option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                            <option> 2024 </option>
+                        </select>
+                    </div>
+
+                    <div class="end-month">
+                        <label for="end_month"> end year <span>*</span></label>
+                        <select name="end_month" id="">
+                            <option> month </option>
+                            <option>  January </option>
+                            <option> February </option>
+                            <option> March </option>
+                            <option>  April </option>
+                            <option>   May </option>
+                            <option>  June </option>
+                            <option>   July </option>
+                            <option> August </option>
+                            <option>September </option>
+                            <option>October </option>
+                            <option> November </option>
+                            <option> December </option>
+                        </select>
+                
+                        <select name="end-year" id="">
+                            <option> Year </option>
+                            <option> 2011 </option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                            <option> 2024 </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="short-exp-details"> A short summary about your experience here <span>*</span></label>
+                    <textarea type="message" name="short-exp-details"> </textarea>
+                </div>
+
+                <div class="save">
+                    <button class="save-experience-btn"> Save </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Add Projects-->
+    <div class="add-projects-box">
+        <div class="add-projects-edit">
+            <div class="add-projects-title">
+                <h5> Projects </h5>
+
+                <div class="projects-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="exp-input-details">
+                <label for="project-name"> Project Name <span>*</span></label>
+                <input type="text" name="project-name">
+            </div>
+
+            <div class="exp-input-details">
+                <label for="project-role"> Role in the project <span>*</span></label>
+                <input type="text" name="project-role">
+            </div>
+
+            <div class="exp-input-details">
+                <label for="project-link"> Project Link <span>*</span></label>
+                <input type="text" name="project-link">
+            </div>
+
+            <p>A short summary about your contribution</p>
+            <textarea type="message" class="add-projects"> </textarea>
+
+            <div class="save">
+                <button class="save-projects-btn"> Save </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Areas of Interest-->
+    <div class="add-areas-of-interest-box">
+        <div class="add-areas-of-interest-edit">
+            <div class="add-areas-of-interest-title">
+                <h5> Skills/Languages Known </h5>
+
+                <div class="areas-of-interest-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="skills-details-edit">
+                <h6> Hard Skills </h6>
+
+                <div class="select-skill">
+                    <p> HTML </p>
+                    <p> CSS </p>
+                    <p>Javascript </p>
+                    <p>Vue.js </p>
+                    <p>Node.js </p>
+                    <p>Cybersecurity </p>
+                    <p>Data Handling </p>
+                    <p>Ethical Hacking </p>
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="add-skill"> Add a Skill <span>*</span></label>
+                    <input type="text" name="add-skill">
+                </div>
+            </div>
+            <hr>
+
+            <div class="skills-details-edit">
+                <h6> Soft Skills </h6>
+
+                <div class="select-skill">
+                    <p> Creative </p>
+                    <p> Passionate </p>
+                    <p> Perfectionist </p>
+                    <p> Team Player </p>
+                    <p> Problem Solver </p>
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="add-skill"> Add a Skill <span>*</span></label>
+                    <input type="text" name="add-skill">
+                </div>
+            </div>
+            <hr>
+
+            <div class="skills-details-edit">
+                <h6> Area of Interest </h6>
+
+                <div class="select-skill">
+                    <p> Entrepreneurship </p>
+                    <p> Programming </p>
+                    <p> Digital Marketing </p>
+                </div>
+
+                <div class="exp-input-details">
+                    <label for="add-skill"> Add a Skill <span>*</span></label>
+                    <input type="text" name="add-skill">
+                </div>
+            </div>
+
+
+            <div class="save">
+                <button class="save-projects-btn"> Save </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Certifications-->
+    <div class="add-certifications-box">
+        <div class="add-certifications-edit">
+            <div class="add-certifications-title">
+                <h5> Certifications </h5>
+
+                <div class="close-certifications-box">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="certifications-details-box">
+                <div class="cert-input-details">
+                    <label for="job-name"> Job Name <span>*</span></label>
+                    <input type="text" name="job-name">
+                </div>
+
+                <div class="cert-input-details">
+                    <label for="organisation"> Issuing Organisation <span>*</span></label>
+                    <input type="text" name="organisation">
+                </div>
+
+                <div class="cert-input-details">
+                    <label for="credential-ID"> Credential ID <span>*</span></label>
+                    <input type="text" name="credential-ID">
+                </div>
+
+                <div class="cert-input-details">
+                    <label for="credential-link"> Credential Link <span>*</span></label>
+                    <input type="text" name="credential-link">
+                </div>
+
+                <div class="certifications-start-end">
+                    <div class="start-month">
+                        <label for="start-month"> Issue Year  <span>*</span></label>
+                        <select name="start-month" id="">
+                            <option> month </option>
+                            <option>  January </option>
+                            <option> February </option>
+                            <option> March </option>
+                            <option>  April </option>
+                            <option>   May </option>
+                            <option>  June </option>
+                            <option>   July </option>
+                            <option> August </option>
+                            <option>September </option>
+                            <option>October </option>
+                            <option> November </option>
+                            <option> December </option>
+                        </select>
+                
+                        <select name="start-year" id="">
+                            <option> Year </option>
+                            <option> 2011 </option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                            <option> 2024 </option>
+                        </select>
+                    </div>
+
+                    <div class="end-month">
+                        <label for="end_month"> Expiry Year <span>*</span></label>
+                        <select name="end_month" id="">
+                            <option> month </option>
+                            <option>  January </option>
+                            <option> February </option>
+                            <option> March </option>
+                            <option>  April </option>
+                            <option>   May </option>
+                            <option>  June </option>
+                            <option>   July </option>
+                            <option> August </option>
+                            <option>September </option>
+                            <option>October </option>
+                            <option> November </option>
+                            <option> December </option>
+                        </select>
+                
+                        <select name="end-year" id="">
+                            <option> Year </option>
+                            <option> 2011 </option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                            <option> 2024 </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="comform-expire">
+                    <input type="checkbox">
+                    <p> This Certificate will not expire. </p>
+                </div>
+
+                <div class="save">
+                    <button class="save-certifications-btn"> Save </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Change Password -->
+    <div class="change-password-box">
+        <div class="password-title">
+            <h3> Change Password </h3>
+
+            <div class="close-change-password">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        
+        <div class="change-password-input">
+            <label for="old-pwd"> Old Password <span>*</span></label>
+            <input type="text" name="old-pwd">
+        </div>
+        
+        <div class="change-password-input">
+            <label for="new-pwd"> New Password <span>*</span></label>
+            <input type="text" name="new-pwd">
+        </div>
+
+        <div class="change-password-input">
+            <label for="comfirm-pwd"> Confirm Password <span>*</span></label>
+            <input type="text" name="comfirm-pwd">
+        </div>
+
+        <div class="confirm">
+            <button class="password-confirm-btn"> Confirm </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
