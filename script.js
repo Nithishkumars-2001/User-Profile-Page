@@ -144,17 +144,9 @@ close_change_password.addEventListener("click", () => {
     change_password_box.style.display = "none"
 })
 
-//select home page
-var home_btn = document.querySelector(".home-btn")
 
-function show_home(){
-    courses_box.style.display = "none"
-    my_profile_box.style.display = "none"
-    home_page.style.display = "block"
-}
+//Learn Tech from Latest Courses slides
 
-
-//Learn Tech from Latest Courses slider
 var counter = 1;
 setInterval(function(){
     document.getElementById('radio' + counter).checked = true;
@@ -236,3 +228,12 @@ function show_courses_box(){
     my_profile_box.style.display = "none"
 }
 
+
+//select home page
+var home_btn = document.querySelector(".home-btn")
+
+function show_home(){
+    courses_box.style.display = "none"
+    my_profile_box.style.display = "none"
+    home_page.style.display = "block"
+}
