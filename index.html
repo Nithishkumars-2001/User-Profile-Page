@@ -45,7 +45,8 @@
         <div class="navbarlink-profile">
 
             <div class="navbar-links">
-                <p> Courses </p>
+                <p onclick="show_home()"> Home </p>
+                <p onclick="show_courses_box()"> Courses </p>
                 <p> LIVE Classes <i class="fa-solid fa-chevron-down"></i> </p>
                 <p> Practice <i class="fa-solid fa-chevron-down"></i> </p>
                 <p> Resources <i class="fa-solid fa-chevron-down"></i> </p>
@@ -71,12 +72,45 @@
         <h6> <i class="fa-solid fa-right-from-bracket"></i> Sign out </h6>
     </div>
 
+    <!-- Change Password -->
+    <div class="change-password-box">
+        <div class="password-title">
+            <h3> Change Password </h3>
+
+            <div class="close-change-password">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="change-password-input">
+            <label for="old-pwd"> Old Password <span>*</span></label>
+            <input type="text" name="old-pwd">
+        </div>
+
+        <div class="change-password-input">
+            <label for="new-pwd"> New Password <span>*</span></label>
+            <input type="text" name="new-pwd">
+        </div>
+
+        <div class="change-password-input">
+            <label for="comfirm-pwd"> Confirm Password <span>*</span></label>
+            <input type="text" name="comfirm-pwd">
+        </div>
+
+        <div class="confirm">
+            <button class="password-confirm-btn"> Confirm </button>
+        </div>
+
+    </div>
+
     <!--Side Navbar-->
     <div class="side-navbar">
         <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
 
         <div class="side-navbar-links">
-            <p> Courses </p>
+            <p onclick="show_home()"> Home </p>
+            <hr>
+            <p onclick="show_courses_box()"> Courses </p>
             <hr>
             <p> LIVE Classes <i class="fa-solid fa-chevron-down"></i> </p>
             <hr>
@@ -89,7 +123,6 @@
             <p> Rewards </p>
         </div>
     </div>
-
 
     <!-- My Profile -->
     <div class="my-profile-box">
@@ -266,611 +299,1628 @@
         </div>
     </div>
 
-    <!--My profile Edit-->
-    <div class="my-profile-edit-box">
-        <div class="my-profile-edit">
-            <div class="my-profile-title">
-                <h5> Personal Details </h5>
+    <div class="my-profile-user-details">
 
-                <div class="my-profile-close">
-                    <i class="fa-solid fa-xmark"></i>
+        <!--My profile Edit-->
+        <div class="my-profile-edit-box">
+            <div class="my-profile-edit">
+                <div class="my-profile-title">
+                    <h5> Personal Details </h5>
+
+                    <div class="my-profile-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
+                <hr>
+
+                <div class="my-profile-details">
+                    <div class="profile-details-input">
+                        <label for="fistname"> First Name <span>*</span></label>
+                        <input type="text" name="fistname">
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="lastname"> Last Name <span>*</span></label>
+                        <input type="text" name="lastname">
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="email"> Email <span>*</span></label>
+                        <input type="text" name="email">
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="phno"> Phone Number <span>*</span></label>
+                        <input type="number" name="phno">
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="gender"> Gender <span>*</span></label>
+                        <select name="gender" id="">
+                            <option> Male </option>
+                            <option> Female </option>
+                            <option> Others </option>
+                            <option> Rather not say </option>
+                        </select>
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="country"> Country <span>*</span></label>
+                        <input type="text" name="country">
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="state"> State <span>*</span></label>
+                        <input type="text" name="state">
+                    </div>
+
+                    <div class="profile-details-input">
+                        <label for="city"> City <span>*</span></label>
+                        <input type="text" name="city">
+                    </div>
+
+                    <div class="save">
+                        <button class="save-profile-btn"> Save </button>
+                    </div>
+                </div>
+
             </div>
-            <hr>
+        </div>
 
-            <div class="my-profile-details">
-                <div class="profile-details-input">
-                    <label for="fistname"> First Name <span>*</span></label>
-                    <input type="text" name="fistname">
-                </div>
+        <!--Add Summary-->
+        <div class="add-summary-box">
+            <div class="add-summary-edit">
+                <div class="add-summary-title">
+                    <h5> Summary </h5>
 
-                <div class="profile-details-input">
-                    <label for="lastname"> Last Name <span>*</span></label>
-                    <input type="text" name="lastname">
+                    <div class="summary-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
+                <hr>
 
-                <div class="profile-details-input">
-                    <label for="email"> Email <span>*</span></label>
-                    <input type="text" name="email">
-                </div>
+                <p>Tell us about your years of experience, industry, or skills. People also talk about their
+                    achievements or
+                    previous job experiences. </p>
 
-                <div class="profile-details-input">
-                    <label for="phno"> Phone Number <span>*</span></label>
-                    <input type="number" name="phno">
-                </div>
-
-                <div class="profile-details-input">
-                    <label for="gender"> Gender <span>*</span></label>
-                    <select name="gender" id="">
-                        <option> Male </option>
-                        <option> Female </option>
-                        <option> Others </option>
-                        <option> Rather not say </option>
-                    </select>
-                </div>
-
-                <div class="profile-details-input">
-                    <label for="country"> Country <span>*</span></label>
-                    <input type="text" name="country">
-                </div>
-
-                <div class="profile-details-input">
-                    <label for="state"> State <span>*</span></label>
-                    <input type="text" name="state">
-                </div>
-
-                <div class="profile-details-input">
-                    <label for="city"> City <span>*</span></label>
-                    <input type="text" name="city">
-                </div>
+                <textarea type="message" class="add-message"> </textarea>
 
                 <div class="save">
-                    <button class="save-profile-btn"> Save </button>
+                    <button class="save-message-btn"> Save </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Add Educational Qualification-->
+        <div class="add-education-box">
+            <div class="add-education-edit">
+                <div class="add-education-title">
+                    <h5> Educational Qualification </h5>
+
+                    <div class="close-education-box">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="edu-details-box">
+                    <div class="edu-input-details">
+                        <label for="level"> Level <span>*</span></label>
+                        <select name="level" id="">
+                            <option> Level </option>
+                            <option> Ph.D.</option>
+                            <option> Master </option>
+                            <option> Bachelors</option>
+                            <option> Diploma </option>
+                            <option> 10th std </option>
+                            <option> 12th std </option>
+                        </select>
+                    </div>
+
+                    <div class="edu-input-details">
+                        <label for="department"> Board/Department <span>*</span></label>
+                        <input type="text" name="department">
+                    </div>
+
+                    <div class="education-start-end">
+                        <div class="start-month">
+                            <label for="start-month"> Start Year <span>*</span></label>
+                            <select name="start-month" id="">
+                                <option> month </option>
+                                <option> January </option>
+                                <option> February </option>
+                                <option> March </option>
+                                <option> April </option>
+                                <option> May </option>
+                                <option> June </option>
+                                <option> July </option>
+                                <option> August </option>
+                                <option>September </option>
+                                <option>October </option>
+                                <option> November </option>
+                                <option> December </option>
+                            </select>
+
+                            <select name="start-year" id="">
+                                <option> Year </option>
+                                <option> 2011 </option>
+                                <option> 2012 </option>
+                                <option> 2013 </option>
+                                <option> 2014 </option>
+                                <option> 2015 </option>
+                                <option> 2016 </option>
+                                <option> 2017 </option>
+                                <option> 2018 </option>
+                                <option> 2019 </option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                                <option> 2022 </option>
+                                <option> 2023 </option>
+                                <option> 2024 </option>
+                            </select>
+                        </div>
+
+                        <div class="graduation-month">
+                            <label for="graduation-month"> Graduation year <span>*</span></label>
+                            <select name="graduation-month" id="">
+                                <option> month </option>
+                                <option> January </option>
+                                <option> February </option>
+                                <option> March </option>
+                                <option> April </option>
+                                <option> May </option>
+                                <option> June </option>
+                                <option> July </option>
+                                <option> August </option>
+                                <option>September </option>
+                                <option>October </option>
+                                <option> November </option>
+                                <option> December </option>
+                            </select>
+
+                            <select name="graduation-year" id="">
+                                <option> Year </option>
+                                <option> 2011 </option>
+                                <option> 2012 </option>
+                                <option> 2013 </option>
+                                <option> 2014 </option>
+                                <option> 2015 </option>
+                                <option> 2016 </option>
+                                <option> 2017 </option>
+                                <option> 2018 </option>
+                                <option> 2019 </option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                                <option> 2022 </option>
+                                <option> 2023 </option>
+                                <option> 2024 </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="edu-input-details">
+                        <label for="grade"> Grade <span>*</span></label>
+                        <input type="text" name="grade">
+                    </div>
+
+                    <div class="edu-input-details">
+                        <label for="school-college-Name"> School/College Name <span>*</span></label>
+                        <input type="text" name="school-college-Name">
+                    </div>
+
+                    <div class="edu-input-details">
+                        <label for="short-exp-details"> A short summary about your experience here
+                            <span>*</span></label>
+                        <textarea type="message" name="short-exp-details"> </textarea>
+                    </div>
+
+                    <div class="save">
+                        <button class="save-education-btn"> Save </button>
+                    </div>
+
                 </div>
             </div>
 
         </div>
-    </div>
 
-    <!--Add Summary-->
-    <div class="add-summary-box">
-        <div class="add-summary-edit">
-            <div class="add-summary-title">
-                <h5> Summary </h5>
+        <!--Add Professional Experience-->
+        <div class="add-experience-box">
+            <div class="add-experience-edit">
+                <div class="add-experience-title">
+                    <h5> Professional Experience </h5>
 
-                <div class="summary-close">
-                    <i class="fa-solid fa-xmark"></i>
+                    <div class="close-experience-box">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="exp-details-box">
+                    <div class="exp-input-details">
+                        <label for="job-title"> Job Title <span>*</span></label>
+                        <input type="text" name="job-title">
+                    </div>
+
+                    <div class="exp-input-details">
+                        <label for="company"> Company <span>*</span></label>
+                        <input type="text" name="company">
+                    </div>
+
+                    <div class="exp-input-details">
+                        <label for="employment"> Employment Type <span>*</span></label>
+                        <input type="text" name="employment">
+                    </div>
+
+                    <div class="exp-input-details">
+                        <label for="location"> Location <span>*</span></label>
+                        <input type="text" name="location">
+                    </div>
+
+                    <div class="experience-start-end">
+                        <div class="start-month">
+                            <label for="start-month"> Start Year <span>*</span></label>
+                            <select name="start-month" id="">
+                                <option> month </option>
+                                <option> January </option>
+                                <option> February </option>
+                                <option> March </option>
+                                <option> April </option>
+                                <option> May </option>
+                                <option> June </option>
+                                <option> July </option>
+                                <option> August </option>
+                                <option>September </option>
+                                <option>October </option>
+                                <option> November </option>
+                                <option> December </option>
+                            </select>
+
+                            <select name="start-year" id="">
+                                <option> Year </option>
+                                <option> 2011 </option>
+                                <option> 2012 </option>
+                                <option> 2013 </option>
+                                <option> 2014 </option>
+                                <option> 2015 </option>
+                                <option> 2016 </option>
+                                <option> 2017 </option>
+                                <option> 2018 </option>
+                                <option> 2019 </option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                                <option> 2022 </option>
+                                <option> 2023 </option>
+                                <option> 2024 </option>
+                            </select>
+                        </div>
+
+                        <div class="end-month">
+                            <label for="end_month"> end year <span>*</span></label>
+                            <select name="end_month" id="">
+                                <option> month </option>
+                                <option> January </option>
+                                <option> February </option>
+                                <option> March </option>
+                                <option> April </option>
+                                <option> May </option>
+                                <option> June </option>
+                                <option> July </option>
+                                <option> August </option>
+                                <option>September </option>
+                                <option>October </option>
+                                <option> November </option>
+                                <option> December </option>
+                            </select>
+
+                            <select name="end-year" id="">
+                                <option> Year </option>
+                                <option> 2011 </option>
+                                <option> 2012 </option>
+                                <option> 2013 </option>
+                                <option> 2014 </option>
+                                <option> 2015 </option>
+                                <option> 2016 </option>
+                                <option> 2017 </option>
+                                <option> 2018 </option>
+                                <option> 2019 </option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                                <option> 2022 </option>
+                                <option> 2023 </option>
+                                <option> 2024 </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="exp-input-details">
+                        <label for="short-exp-details"> A short summary about your experience here
+                            <span>*</span></label>
+                        <textarea type="message" name="short-exp-details"> </textarea>
+                    </div>
+
+                    <div class="save">
+                        <button class="save-experience-btn"> Save </button>
+                    </div>
+
                 </div>
             </div>
-            <hr>
 
-            <p>Tell us about your years of experience, industry, or skills. People also talk about their achievements or
-                previous job experiences. </p>
-
-            <textarea type="message" class="add-message"> </textarea>
-
-            <div class="save">
-                <button class="save-message-btn"> Save </button>
-            </div>
         </div>
-    </div>
 
-    <!--Add Educational Qualification-->
-    <div class="add-education-box">
-        <div class="add-education-edit">
-            <div class="add-education-title">
-                <h5> Educational Qualification </h5>
+        <!--Add Projects-->
+        <div class="add-projects-box">
+            <div class="add-projects-edit">
+                <div class="add-projects-title">
+                    <h5> Projects </h5>
 
-                <div class="close-education-box">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <hr>
-
-            <div class="edu-details-box">
-                <div class="edu-input-details">
-                    <label for="level"> Level  <span>*</span></label>
-                    <select name="level" id="">
-                        <option> Level </option>
-                        <option> Ph.D.</option>
-                        <option> Master </option>
-                        <option> Bachelors</option>
-                        <option> Diploma </option>
-                        <option> 10th std </option>
-                        <option> 12th std </option>
-                    </select>
-                </div>
-
-                <div class="edu-input-details">
-                    <label for="department"> Board/Department <span>*</span></label>
-                    <input type="text" name="department">
-                </div>
-
-                <div class="education-start-end">
-                    <div class="start-month">
-                        <label for="start-month"> Start Year <span>*</span></label>
-                        <select name="start-month" id="">
-                            <option> month </option>
-                            <option>  January </option>
-                            <option> February </option>
-                            <option> March </option>
-                            <option>  April </option>
-                            <option>   May </option>
-                            <option>  June </option>
-                            <option>   July </option>
-                            <option> August </option>
-                            <option>September </option>
-                            <option>October </option>
-                            <option> November </option>
-                            <option> December </option>
-                        </select>
-                
-                        <select name="start-year" id="">
-                            <option> Year </option>
-                            <option> 2011 </option>
-                            <option> 2012 </option>
-                            <option> 2013 </option>
-                            <option> 2014 </option>
-                            <option> 2015 </option>
-                            <option> 2016 </option>
-                            <option> 2017 </option>
-                            <option> 2018 </option>
-                            <option> 2019 </option>
-                            <option> 2020 </option>
-                            <option> 2021 </option>
-                            <option> 2022 </option>
-                            <option> 2023 </option>
-                            <option> 2024 </option>
-                        </select>
-                    </div>
-
-                    <div class="graduation-month">
-                        <label for="graduation-month"> Graduation year <span>*</span></label>
-                        <select name="graduation-month" id="">
-                            <option> month </option>
-                            <option>  January </option>
-                            <option> February </option>
-                            <option> March </option>
-                            <option>  April </option>
-                            <option>   May </option>
-                            <option>  June </option>
-                            <option>   July </option>
-                            <option> August </option>
-                            <option>September </option>
-                            <option>October </option>
-                            <option> November </option>
-                            <option> December </option>
-                        </select>
-                
-                        <select name="graduation-year" id="">
-                            <option> Year </option>
-                            <option> 2011 </option>
-                            <option> 2012 </option>
-                            <option> 2013 </option>
-                            <option> 2014 </option>
-                            <option> 2015 </option>
-                            <option> 2016 </option>
-                            <option> 2017 </option>
-                            <option> 2018 </option>
-                            <option> 2019 </option>
-                            <option> 2020 </option>
-                            <option> 2021 </option>
-                            <option> 2022 </option>
-                            <option> 2023 </option>
-                            <option> 2024 </option>
-                        </select>
+                    <div class="projects-close">
+                        <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
+                <hr>
 
-                <div class="edu-input-details">
-                    <label for="grade"> Grade <span>*</span></label>
-                    <input type="text" name="grade">
+                <div class="exp-input-details">
+                    <label for="project-name"> Project Name <span>*</span></label>
+                    <input type="text" name="project-name">
                 </div>
 
-                <div class="edu-input-details">
-                    <label for="school-college-Name"> School/College Name <span>*</span></label>
-                    <input type="text" name="school-college-Name">
+                <div class="exp-input-details">
+                    <label for="project-role"> Role in the project <span>*</span></label>
+                    <input type="text" name="project-role">
                 </div>
 
-                <div class="edu-input-details">
-                    <label for="short-exp-details"> A short summary about your experience here <span>*</span></label>
-                    <textarea type="message" name="short-exp-details"> </textarea>
+                <div class="exp-input-details">
+                    <label for="project-link"> Project Link <span>*</span></label>
+                    <input type="text" name="project-link">
                 </div>
+
+                <p>A short summary about your contribution</p>
+                <textarea type="message" class="add-projects"> </textarea>
 
                 <div class="save">
-                    <button class="save-education-btn"> Save </button>
+                    <button class="save-projects-btn"> Save </button>
                 </div>
-
             </div>
         </div>
 
-    </div>
+        <!--Add Areas of Interest-->
+        <div class="add-areas-of-interest-box">
+            <div class="add-areas-of-interest-edit">
+                <div class="add-areas-of-interest-title">
+                    <h5> Skills/Languages Known </h5>
 
-    <!--Add Professional Experience-->
-    <div class="add-experience-box">
-        <div class="add-experience-edit">
-            <div class="add-experience-title">
-                <h5> Professional Experience </h5>
-
-                <div class="close-experience-box">
-                    <i class="fa-solid fa-xmark"></i>
+                    <div class="areas-of-interest-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
-            </div>
-            <hr>
+                <hr>
 
-            <div class="exp-details-box">
-                <div class="exp-input-details">
-                    <label for="job-title"> Job Title <span>*</span></label>
-                    <input type="text" name="job-title">
-                </div>
+                <div class="skills-details-edit">
+                    <h6> Hard Skills </h6>
 
-                <div class="exp-input-details">
-                    <label for="company"> Company <span>*</span></label>
-                    <input type="text" name="company">
-                </div>
-
-                <div class="exp-input-details">
-                    <label for="employment"> Employment Type <span>*</span></label>
-                    <input type="text" name="employment">
-                </div>
-
-                <div class="exp-input-details">
-                    <label for="location"> Location <span>*</span></label>
-                    <input type="text" name="location">
-                </div>
-
-                <div class="experience-start-end">
-                    <div class="start-month">
-                        <label for="start-month"> Start Year <span>*</span></label>
-                        <select name="start-month" id="">
-                            <option> month </option>
-                            <option>  January </option>
-                            <option> February </option>
-                            <option> March </option>
-                            <option>  April </option>
-                            <option>   May </option>
-                            <option>  June </option>
-                            <option>   July </option>
-                            <option> August </option>
-                            <option>September </option>
-                            <option>October </option>
-                            <option> November </option>
-                            <option> December </option>
-                        </select>
-                
-                        <select name="start-year" id="">
-                            <option> Year </option>
-                            <option> 2011 </option>
-                            <option> 2012 </option>
-                            <option> 2013 </option>
-                            <option> 2014 </option>
-                            <option> 2015 </option>
-                            <option> 2016 </option>
-                            <option> 2017 </option>
-                            <option> 2018 </option>
-                            <option> 2019 </option>
-                            <option> 2020 </option>
-                            <option> 2021 </option>
-                            <option> 2022 </option>
-                            <option> 2023 </option>
-                            <option> 2024 </option>
-                        </select>
+                    <div class="select-skill">
+                        <p> HTML </p>
+                        <p> CSS </p>
+                        <p>Javascript </p>
+                        <p>Vue.js </p>
+                        <p>Node.js </p>
+                        <p>Cybersecurity </p>
+                        <p>Data Handling </p>
+                        <p>Ethical Hacking </p>
                     </div>
 
-                    <div class="end-month">
-                        <label for="end_month"> end year <span>*</span></label>
-                        <select name="end_month" id="">
-                            <option> month </option>
-                            <option>  January </option>
-                            <option> February </option>
-                            <option> March </option>
-                            <option>  April </option>
-                            <option>   May </option>
-                            <option>  June </option>
-                            <option>   July </option>
-                            <option> August </option>
-                            <option>September </option>
-                            <option>October </option>
-                            <option> November </option>
-                            <option> December </option>
-                        </select>
-                
-                        <select name="end-year" id="">
-                            <option> Year </option>
-                            <option> 2011 </option>
-                            <option> 2012 </option>
-                            <option> 2013 </option>
-                            <option> 2014 </option>
-                            <option> 2015 </option>
-                            <option> 2016 </option>
-                            <option> 2017 </option>
-                            <option> 2018 </option>
-                            <option> 2019 </option>
-                            <option> 2020 </option>
-                            <option> 2021 </option>
-                            <option> 2022 </option>
-                            <option> 2023 </option>
-                            <option> 2024 </option>
-                        </select>
+                    <div class="exp-input-details">
+                        <label for="add-skill"> Add a Skill <span>*</span></label>
+                        <input type="text" name="add-skill">
+                    </div>
+                </div>
+                <hr>
+
+                <div class="skills-details-edit">
+                    <h6> Soft Skills </h6>
+
+                    <div class="select-skill">
+                        <p> Creative </p>
+                        <p> Passionate </p>
+                        <p> Perfectionist </p>
+                        <p> Team Player </p>
+                        <p> Problem Solver </p>
+                    </div>
+
+                    <div class="exp-input-details">
+                        <label for="add-skill"> Add a Skill <span>*</span></label>
+                        <input type="text" name="add-skill">
+                    </div>
+                </div>
+                <hr>
+
+                <div class="skills-details-edit">
+                    <h6> Area of Interest </h6>
+
+                    <div class="select-skill">
+                        <p> Entrepreneurship </p>
+                        <p> Programming </p>
+                        <p> Digital Marketing </p>
+                    </div>
+
+                    <div class="exp-input-details">
+                        <label for="add-skill"> Add a Skill <span>*</span></label>
+                        <input type="text" name="add-skill">
                     </div>
                 </div>
 
-                <div class="exp-input-details">
-                    <label for="short-exp-details"> A short summary about your experience here <span>*</span></label>
-                    <textarea type="message" name="short-exp-details"> </textarea>
-                </div>
 
                 <div class="save">
-                    <button class="save-experience-btn"> Save </button>
+                    <button class="save-projects-btn"> Save </button>
                 </div>
-
             </div>
         </div>
 
-    </div>
+        <!--Add Certifications-->
+        <div class="add-certifications-box">
+            <div class="add-certifications-edit">
+                <div class="add-certifications-title">
+                    <h5> Certifications </h5>
 
-    <!--Add Projects-->
-    <div class="add-projects-box">
-        <div class="add-projects-edit">
-            <div class="add-projects-title">
-                <h5> Projects </h5>
-
-                <div class="projects-close">
-                    <i class="fa-solid fa-xmark"></i>
+                    <div class="close-certifications-box">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
-            </div>
-            <hr>
+                <hr>
 
-            <div class="exp-input-details">
-                <label for="project-name"> Project Name <span>*</span></label>
-                <input type="text" name="project-name">
-            </div>
-
-            <div class="exp-input-details">
-                <label for="project-role"> Role in the project <span>*</span></label>
-                <input type="text" name="project-role">
-            </div>
-
-            <div class="exp-input-details">
-                <label for="project-link"> Project Link <span>*</span></label>
-                <input type="text" name="project-link">
-            </div>
-
-            <p>A short summary about your contribution</p>
-            <textarea type="message" class="add-projects"> </textarea>
-
-            <div class="save">
-                <button class="save-projects-btn"> Save </button>
-            </div>
-        </div>
-    </div>
-
-    <!--Add Areas of Interest-->
-    <div class="add-areas-of-interest-box">
-        <div class="add-areas-of-interest-edit">
-            <div class="add-areas-of-interest-title">
-                <h5> Skills/Languages Known </h5>
-
-                <div class="areas-of-interest-close">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <hr>
-
-            <div class="skills-details-edit">
-                <h6> Hard Skills </h6>
-
-                <div class="select-skill">
-                    <p> HTML </p>
-                    <p> CSS </p>
-                    <p>Javascript </p>
-                    <p>Vue.js </p>
-                    <p>Node.js </p>
-                    <p>Cybersecurity </p>
-                    <p>Data Handling </p>
-                    <p>Ethical Hacking </p>
-                </div>
-
-                <div class="exp-input-details">
-                    <label for="add-skill"> Add a Skill <span>*</span></label>
-                    <input type="text" name="add-skill">
-                </div>
-            </div>
-            <hr>
-
-            <div class="skills-details-edit">
-                <h6> Soft Skills </h6>
-
-                <div class="select-skill">
-                    <p> Creative </p>
-                    <p> Passionate </p>
-                    <p> Perfectionist </p>
-                    <p> Team Player </p>
-                    <p> Problem Solver </p>
-                </div>
-
-                <div class="exp-input-details">
-                    <label for="add-skill"> Add a Skill <span>*</span></label>
-                    <input type="text" name="add-skill">
-                </div>
-            </div>
-            <hr>
-
-            <div class="skills-details-edit">
-                <h6> Area of Interest </h6>
-
-                <div class="select-skill">
-                    <p> Entrepreneurship </p>
-                    <p> Programming </p>
-                    <p> Digital Marketing </p>
-                </div>
-
-                <div class="exp-input-details">
-                    <label for="add-skill"> Add a Skill <span>*</span></label>
-                    <input type="text" name="add-skill">
-                </div>
-            </div>
-
-
-            <div class="save">
-                <button class="save-projects-btn"> Save </button>
-            </div>
-        </div>
-    </div>
-
-    <!--Add Certifications-->
-    <div class="add-certifications-box">
-        <div class="add-certifications-edit">
-            <div class="add-certifications-title">
-                <h5> Certifications </h5>
-
-                <div class="close-certifications-box">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <hr>
-
-            <div class="certifications-details-box">
-                <div class="cert-input-details">
-                    <label for="job-name"> Job Name <span>*</span></label>
-                    <input type="text" name="job-name">
-                </div>
-
-                <div class="cert-input-details">
-                    <label for="organisation"> Issuing Organisation <span>*</span></label>
-                    <input type="text" name="organisation">
-                </div>
-
-                <div class="cert-input-details">
-                    <label for="credential-ID"> Credential ID <span>*</span></label>
-                    <input type="text" name="credential-ID">
-                </div>
-
-                <div class="cert-input-details">
-                    <label for="credential-link"> Credential Link <span>*</span></label>
-                    <input type="text" name="credential-link">
-                </div>
-
-                <div class="certifications-start-end">
-                    <div class="start-month">
-                        <label for="start-month"> Issue Year  <span>*</span></label>
-                        <select name="start-month" id="">
-                            <option> month </option>
-                            <option>  January </option>
-                            <option> February </option>
-                            <option> March </option>
-                            <option>  April </option>
-                            <option>   May </option>
-                            <option>  June </option>
-                            <option>   July </option>
-                            <option> August </option>
-                            <option>September </option>
-                            <option>October </option>
-                            <option> November </option>
-                            <option> December </option>
-                        </select>
-                
-                        <select name="start-year" id="">
-                            <option> Year </option>
-                            <option> 2011 </option>
-                            <option> 2012 </option>
-                            <option> 2013 </option>
-                            <option> 2014 </option>
-                            <option> 2015 </option>
-                            <option> 2016 </option>
-                            <option> 2017 </option>
-                            <option> 2018 </option>
-                            <option> 2019 </option>
-                            <option> 2020 </option>
-                            <option> 2021 </option>
-                            <option> 2022 </option>
-                            <option> 2023 </option>
-                            <option> 2024 </option>
-                        </select>
+                <div class="certifications-details-box">
+                    <div class="cert-input-details">
+                        <label for="job-name"> Job Name <span>*</span></label>
+                        <input type="text" name="job-name">
                     </div>
 
-                    <div class="end-month">
-                        <label for="end_month"> Expiry Year <span>*</span></label>
-                        <select name="end_month" id="">
-                            <option> month </option>
-                            <option>  January </option>
-                            <option> February </option>
-                            <option> March </option>
-                            <option>  April </option>
-                            <option>   May </option>
-                            <option>  June </option>
-                            <option>   July </option>
-                            <option> August </option>
-                            <option>September </option>
-                            <option>October </option>
-                            <option> November </option>
-                            <option> December </option>
-                        </select>
-                
-                        <select name="end-year" id="">
-                            <option> Year </option>
-                            <option> 2011 </option>
-                            <option> 2012 </option>
-                            <option> 2013 </option>
-                            <option> 2014 </option>
-                            <option> 2015 </option>
-                            <option> 2016 </option>
-                            <option> 2017 </option>
-                            <option> 2018 </option>
-                            <option> 2019 </option>
-                            <option> 2020 </option>
-                            <option> 2021 </option>
-                            <option> 2022 </option>
-                            <option> 2023 </option>
-                            <option> 2024 </option>
-                        </select>
+                    <div class="cert-input-details">
+                        <label for="organisation"> Issuing Organisation <span>*</span></label>
+                        <input type="text" name="organisation">
+                    </div>
+
+                    <div class="cert-input-details">
+                        <label for="credential-ID"> Credential ID <span>*</span></label>
+                        <input type="text" name="credential-ID">
+                    </div>
+
+                    <div class="cert-input-details">
+                        <label for="credential-link"> Credential Link <span>*</span></label>
+                        <input type="text" name="credential-link">
+                    </div>
+
+                    <div class="certifications-start-end">
+                        <div class="start-month">
+                            <label for="start-month"> Issue Year <span>*</span></label>
+                            <select name="start-month" id="">
+                                <option> month </option>
+                                <option> January </option>
+                                <option> February </option>
+                                <option> March </option>
+                                <option> April </option>
+                                <option> May </option>
+                                <option> June </option>
+                                <option> July </option>
+                                <option> August </option>
+                                <option>September </option>
+                                <option>October </option>
+                                <option> November </option>
+                                <option> December </option>
+                            </select>
+
+                            <select name="start-year" id="">
+                                <option> Year </option>
+                                <option> 2011 </option>
+                                <option> 2012 </option>
+                                <option> 2013 </option>
+                                <option> 2014 </option>
+                                <option> 2015 </option>
+                                <option> 2016 </option>
+                                <option> 2017 </option>
+                                <option> 2018 </option>
+                                <option> 2019 </option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                                <option> 2022 </option>
+                                <option> 2023 </option>
+                                <option> 2024 </option>
+                            </select>
+                        </div>
+
+                        <div class="end-month">
+                            <label for="end_month"> Expiry Year <span>*</span></label>
+                            <select name="end_month" id="">
+                                <option> month </option>
+                                <option> January </option>
+                                <option> February </option>
+                                <option> March </option>
+                                <option> April </option>
+                                <option> May </option>
+                                <option> June </option>
+                                <option> July </option>
+                                <option> August </option>
+                                <option>September </option>
+                                <option>October </option>
+                                <option> November </option>
+                                <option> December </option>
+                            </select>
+
+                            <select name="end-year" id="">
+                                <option> Year </option>
+                                <option> 2011 </option>
+                                <option> 2012 </option>
+                                <option> 2013 </option>
+                                <option> 2014 </option>
+                                <option> 2015 </option>
+                                <option> 2016 </option>
+                                <option> 2017 </option>
+                                <option> 2018 </option>
+                                <option> 2019 </option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                                <option> 2022 </option>
+                                <option> 2023 </option>
+                                <option> 2024 </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="comform-expire">
+                        <input type="checkbox">
+                        <p> This Certificate will not expire. </p>
+                    </div>
+
+                    <div class="save">
+                        <button class="save-certifications-btn"> Save </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Home Page-->
+
+    <div class="home-page">
+
+        <!--Our Learners Work at Companies-->
+        <div class="our-learners-work-box">
+            <div class="our-learners-work-title">
+                <h3> Our Learners Work at </h3>
+            </div>
+
+            <div class="work-at-company-names">
+
+                <!--company img-->
+                <div class="company-img">
+                    <img src="amozon logo.png" alt="amozon">
+                    <img src="wipro logo.png" alt="wipro">
+                    <img src="hcl logo.png" alt="hcl">
+                    <img src="tcs logo.png" alt="tcs">
+                    <img src="verizon logo.png" alt="verizon">
+                    <img src="zoho logo.png" alt="zoho">
+                    <img src="google logo.png" alt="google">
+                    <img src="dell logo.png" alt="dell">
+                    <img src="accenture logo.png" alt="accenture">
+                    <img src="infosys logo.png" alt="infosys">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--Learn Tech from Latest Courses-->
+        <div class="learn-tech-from-latest-courses">
+            <div class="latest-courses-title">
+                <h2> Learn Tech from Latest Courses </h2>
+                <h5> Explore 100+ Premium Courses with New Course Additions every Month. </h5>
+            </div>
+
+            <div class="latest-courses-list">
+
+                <!--radio button start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+                <input type="radio" name="radio-btn" id="radio8">
+
+                <div class="latest-courses first">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> MangoDB</h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
                     </div>
                 </div>
 
-                <div class="comform-expire">
-                    <input type="checkbox">
-                    <p> This Certificate will not expire. </p>
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="free-lc-btn"> Free </h6>
+
+                    <div class="course-name">
+                        <h5> SQL </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="save">
-                    <button class="save-certifications-btn"> Save </button>
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="free-lc-btn"> Free </h6>
+
+                    <div class="course-name">
+                        <h5> C++ </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="free-lc-btn"> Free </h6>
+
+                    <div class="course-name">
+                        <h5> MS Excel </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> Node js</h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> React </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> UI/UX Design</h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> PHP </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> Advanced Javascript </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> Agile Fundamentals </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-courses">
+                    <img src="courses img1.webp" alt="img 1">
+                    <h6 class="premium-btn"> Premium </h6>
+
+                    <div class="course-name">
+                        <h5> Angular </h5>
+
+                        <div class="enrolled-lc-courses">
+                            <h6> <i class="fa-solid fa-globe"></i> English </h6>
+                            <h6> <i class="fa-solid fa-user-plus"></i> 7500 Enrolled </h6>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            <!-- Automatic navigation -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"> </div>
+                <div class="auto-btn2"> </div>
+                <div class="auto-btn3"> </div>
+                <div class="auto-btn4"> </div>
+                <div class="auto-btn5"> </div>
+                <div class="auto-btn6"> </div>
+                <div class="auto-btn7"> </div>
+                <div class="auto-btn8"> </div>
+            </div>
+
+            <!--Manual navigation -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"> </label>
+                <label for="radio2" class="manual-btn"> </label>
+                <label for="radio3" class="manual-btn"> </label>
+                <label for="radio4" class="manual-btn"> </label>
+                <label for="radio5" class="manual-btn"> </label>
+                <label for="radio6" class="manual-btn"> </label>
+                <label for="radio7" class="manual-btn"> </label>
+                <label for="radio8" class="manual-btn"> </label>
+            </div>
+
+            <div class="courses-btn">
+                <button type="button" class="explore-cour-btn" onclick="show_courses_box()"> Explore Courses </button>
+            </div>
+
         </div>
 
     </div>
 
-    <!-- Change Password -->
-    <div class="change-password-box">
-        <div class="password-title">
-            <h3> Change Password </h3>
+    <!-- Courses -->
+    <div class="courses-box">
+        <div class="my-courses">
+            <h3>Online Courses</h3>
+            <div class="courses-option-title">
+                <div class="courses-option-list">
 
-            <div class="close-change-password">
-                <i class="fa-solid fa-xmark"></i>
+                    <div class="course-option1">
+                        <h4> Course Library </h4>
+                        <div class="line1"> </div>
+                    </div>
+
+                    <div class="course-option2">
+                        <h4> Combo </h4>
+                        <div class="line2"> </div>
+                    </div>
+
+                    <div class="course-option3">
+                        <h4> Free Library</h4>
+                        <div class="line3"> </div>
+                    </div>
+
+                    <div class="course-option4">
+                        <h4> Webinars </h4>
+                        <div class="line4"> </div>
+                    </div>
+                </div>
+
+                <div class="search-box">
+                    <label for="srch"> Search </label>
+                    <input type="search" class="srch">
+                </div>
+            </div>
+
+            <!-- Courses Library -->
+            <div class="courses-item">
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="7.jpg"> </video>
+                    <h3> Full Stack Development Program </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted poster="ds.jpg"> </video>
+                    <h3> Data Engineering Program </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="py.jpg"> </video>
+                    <h3> Python </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="1.jpg"> </video>
+                    <h3> Devops Program</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="2.jpg"> </video>
+                    <h3> Automation Testing </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="17.jpg"> </video>
+                    <h3> Machine Learning Program</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="4.jpg"> </video>
+                    <h3> UI/UX Program</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="5.jpg"> </video>
+                    <h3> Motion Graphics </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="6.jpg"> </video>
+                    <h3> JAVA </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="8.jpg"> </video>
+                    <h3> Business Analytics </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="9.jpg"> </video>
+                    <h3> Digital Marketing </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="10.jpg"> </video>
+                    <h3> Artificial Intelligence </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="11.jpg"> </video>
+                    <h3> Cyber Security</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="12.jpg"> </video>
+                    <h3> C Programming </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="13.jpg"> </video>
+                    <h3> Blockchain </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+
+                <div class="courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="14.jpg"> </video>
+                    <h3> Ethical Hacking </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <h4>Learn for Free</h4>
+                </div>
+                
+            </div>
+
+            <!-- Combo -->
+            <div class="combo-items">
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="17.jpg"> </video>
+                    <h3> Full Stack Development combo </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="16.jpg"> </video>
+                    <h3> Web Development combo </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="15.jpg"> </video>
+                    <h3> Selenium Automation Bundle </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="14.jpg"> </video>
+                    <h3> Artificial Intelligence Bundle </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="13.jpg"> </video>
+                    <h3> Cybersecurity Bundle </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="12.jpg"> </video>
+                    <h3> Data Engineering Bundle </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="10.jpg"> </video>
+                    <h3> IOT Engineers combo </h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+
+                <div class="combo-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="9.jpg"> </video>
+                    <h3> Ultimate Microsoft Office Bundle</h3>
+                    <div class="enrolled">
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <p> <i class="fa-solid fa-indian-rupee-sign"></i> 2499/-</p>
+                        <h5> <i class="fa-solid fa-indian-rupee-sign"></i> 5000/-</h5>
+                        <button class="premium-btn"> Premium </button>
+                    </div>
+                    <div class="money-save">
+                        <p> You save <i class="fa-solid fa-indian-rupee-sign"></i> 2501 (50% off)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Free Library-->
+            <div class="free-library-items">
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="8.jpg"> </video>
+                    <h3> Advanced Java</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="6.jpg"> </video>
+                    <h3> Angular JS </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="5.jpg"> </video>
+                    <h3> Bootstrap 3 </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="4.jpg"> </video>
+                    <h3> C </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="ds.jpg"> </video>
+                    <h3> C++ </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="2.jpg"> </video>
+                    <h3> Client side programming </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="1.jpg"> </video>
+                    <h3> Cyber Security in depth </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+
+                <div class="free-courses">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="ds.jpg"> </video>
+                    <h3> CSS Grid and Flexbox</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 Hrs</p>
+                        </div>
+                        <div class="language">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>English</p>
+                        </div>
+                        <div class="enroll">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>5k Enrolled</p>
+                        </div>
+                    </div>
+                    <button class="free-btn"> Free </button>
+                </div>
+            </div>
+
+            <!--webinars-->
+            <div class="webinars-items">
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> Full Stack Development Careers Guidance</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> Learn Basic Programming 1 Hour</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> How to start a career in Data Science </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> How to become a MERN Stack Developer </h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> Build your First Machine Learning Model</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> How to build an interactive Website?</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> Full Stack Development Careers Guidance</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webinars-videos">
+                    <video src="Empty. [Official Trailer].mp4" controls muted loop poster="webinars.webp"> </video>
+                    <h3> Full Stack Development Careers Guidance</h3>
+                    <div class="enrolled">
+                        <div class="hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>1 Hr 45 Mins</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <div class="change-password-input">
-            <label for="old-pwd"> Old Password <span>*</span></label>
-            <input type="text" name="old-pwd">
-        </div>
-        
-        <div class="change-password-input">
-            <label for="new-pwd"> New Password <span>*</span></label>
-            <input type="text" name="new-pwd">
-        </div>
-
-        <div class="change-password-input">
-            <label for="comfirm-pwd"> Confirm Password <span>*</span></label>
-            <input type="text" name="comfirm-pwd">
-        </div>
-
-        <div class="confirm">
-            <button class="password-confirm-btn"> Confirm </button>
-        </div>
-
     </div>
+
+
 
     <script src="script.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
