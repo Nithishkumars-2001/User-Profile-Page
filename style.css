@@ -1835,16 +1835,16 @@ body{
             transform: translateX(-720px);
         }
         60%{
-            transform: translateX(-1090px);
+            transform: translateX(-1120px);
         }
         70%{
-            transform: translateX(-1090px);
+            transform: translateX(-1120px);
         }
         80%{
-            transform: translateX(-1460px);
+            transform: translateX(-1500px);
         }
         90%{
-            transform: translateX(-1460px);
+            transform: translateX(-1500px);
         }
        
     }
